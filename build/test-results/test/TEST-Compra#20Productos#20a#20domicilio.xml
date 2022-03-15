@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Compra Productos a domicilio" tests="1" skipped="1" failures="0" errors="0" timestamp="2022-03-15T20:19:20" hostname="PSOKFA0777" time="0.248">
+  <properties/>
+  <testcase name="Compra productos de mercado" classname="Compra Productos a domicilio" time="0.248">
+    <skipped/>
+  </testcase>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
