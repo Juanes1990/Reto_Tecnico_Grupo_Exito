@@ -12,13 +12,13 @@ public class LogIn implements Task {
     private String correo;
     private String contrasenna;
 
-    public LogIn withEmail (String correo){
-        this.correo=correo;
+    public LogIn withEmail(String correo) {
+        this.correo = correo;
         return this;
     }
 
-    public LogIn andPassword(String contrasenna){
-        this.contrasenna=contrasenna;
+    public LogIn andPassword(String contrasenna) {
+        this.contrasenna = contrasenna;
         return this;
     }
 

@@ -6,24 +6,27 @@ import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Enter;
 import net.serenitybdd.screenplay.actions.Hit;
 import org.openqa.selenium.Keys;
+
+
 import static com.exito.userinterfaces.purchase.ProductPage.*;
 
 public class BrowseToProduct implements Task {
     private String product;
     private String city;
 
-    public BrowseToProduct withProduct(String product){
-        this.product=product;
+    public BrowseToProduct withProduct(String product) {
+        this.product = product;
         return this;
     }
 
-    public BrowseToProduct andCity(String city){
-        this.city=city;
+    public BrowseToProduct andCity(String city) {
+        this.city = city;
         return this;
     }
 
     @Override
     public <T extends Actor> void performAs(T actor) {
+
         actor.attemptsTo(
                 Click.on(CATEGORIAS),
                 Click.on(MERCADO),
@@ -38,7 +41,7 @@ public class BrowseToProduct implements Task {
 
     }
 
-    public static BrowseToProduct browsetoProduct(){
+    public static BrowseToProduct browsetoProduct() {
         return new BrowseToProduct();
     }
 }

@@ -6,7 +6,7 @@ import org.openqa.selenium.By;
 
 public class Validation extends PageObject {
 
-    public static final Target TITULO= Target.
+    public static final Target TITULO = Target.
             the("finalizar compra")
             .located(By.id("orderform-title"));
 }

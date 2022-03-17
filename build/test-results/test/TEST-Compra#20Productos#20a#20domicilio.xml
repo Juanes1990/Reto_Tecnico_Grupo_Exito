@@ -1,9 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Compra Productos a domicilio" tests="1" skipped="1" failures="0" errors="0" timestamp="2022-03-15T20:19:20" hostname="PSOKFA0777" time="0.248">
+<testsuite name="Compra Productos a domicilio" tests="1" skipped="0" failures="1" errors="0" timestamp="2022-03-17T17:52:15" hostname="PSOKFA0777" time="53.843">
   <properties/>
-  <testcase name="Compra productos de mercado" classname="Compra Productos a domicilio" time="0.248">
-    <skipped/>
+  <testcase name="Compra productos de mercado" classname="Compra Productos a domicilio" time="53.843">
+    <failure message="java.lang.AssertionError: ERROR EN LA SELECCION DEL PRODUCTO" type="java.lang.AssertionError">java.lang.AssertionError: ERROR EN LA SELECCION DEL PRODUCTO
+	at com.exito.stepdefinition.purchase.StepDefinition.elClienteSeleccionaSusProductosYFinalizaSuCompra(StepDefinition.java:106)
+	at ✽.el cliente selecciona sus productos y finaliza su compra(file:///D:/RetoAutomatizacionWeb/src/test/resources/features/purchase.feature:10)
+</failure>
   </testcase>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
+  <system-out><![CDATA[2022-03-17 12:52:22 INFO  StepDefinition:37 Cargó la página del exito
+2022-03-17 12:52:30 INFO  StepDefinition:53 inicio de sesión exitoso
+2022-03-17 12:52:44 INFO  StepDefinition:71 Busqueda correcta del producto
+2022-03-17 12:52:52 INFO  StepDefinition:81 Se ordenan los productos por precio
+2022-03-17 12:53:01 INFO  StepDefinition:92 Agregar al carro primera vez
+2022-03-17 12:53:08 WARN  StepDefinition:105 stale element reference: element is not attached to the page document
+  (Session info: chrome=99.0.4844.74)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'PSOKFA0777', ip: '192.168.0.19', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.13'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 99.0.4844.74, chrome: {chromedriverVersion: 99.0.4844.51 (d537ec02474b5..., userDataDir: C:\Users\JUAN~1.PIN\AppData...}, goog:chromeOptions: {debuggerAddress: localhost:50362}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 43bd6a3802f0a04ec8471f5f156db2f0
+]]></system-out>
+  <system-err><![CDATA[mar. 17, 2022 12:52:16 P. M. org.openqa.selenium.remote.DesiredCapabilities chrome
+INFO: Using `new ChromeOptions()` is preferred to `DesiredCapabilities.chrome()`
+Starting ChromeDriver 99.0.4844.51 (d537ec02474b5afe23684e7963d538896c63ac77-refs/branch-heads/4844@{#875}) on port 45481
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+mar. 17, 2022 12:52:18 P. M. org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
 </testsuite>

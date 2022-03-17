@@ -8,13 +8,15 @@ import net.serenitybdd.screenplay.actions.Open;
 public class OpenPageInit implements Task {
 
     private PageInit pageInit;
+
     @Override
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
                 Open.browserOn(pageInit)
         );
     }
-    public static OpenPageInit openPageInit(){
+
+    public static OpenPageInit openPageInit() {
         return new OpenPageInit();
     }
 }

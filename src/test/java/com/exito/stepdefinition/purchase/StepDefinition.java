@@ -15,6 +15,7 @@ import static com.exito.tasks.purchase.Checkout.checkout;
 import static com.exito.tasks.purchase.LogIn.logIn;
 import static com.exito.tasks.purchase.BrowseToProduct.browsetoProduct;
 import static com.exito.tasks.purchase.OrderProduct.orderProduct;
+import static com.exito.tasks.purchase.RepeatAdd.repeatAdd;
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 import static org.hamcrest.CoreMatchers.equalTo;
@@ -33,6 +34,7 @@ public class StepDefinition extends Setup {
             theActorInTheSpotlight().wasAbleTo(
                     openPageInit()
             );
+            LOGGER.info("Cargó la página del exito");
         } catch (Exception e) {
             LOGGER.warn(e.getMessage());
             Assertions.fail("");
@@ -48,6 +50,7 @@ public class StepDefinition extends Setup {
                             .withEmail(customer.getEmail())
                             .andPassword(customer.getPassword())
             );
+            LOGGER.info("inicio de sesión exitoso");
 
         } catch (Exception e) {
             LOGGER.warn(e.getMessage());
@@ -59,52 +62,55 @@ public class StepDefinition extends Setup {
     @When("el cliente selecciona sus productos y finaliza su compra")
     public void elClienteSeleccionaSusProductosYFinalizaSuCompra() {
         try {
-            Thread.sleep(3000);
+            waitTime(2000);
             theActorInTheSpotlight().attemptsTo(
                     browsetoProduct()
                             .withProduct("lechuga")
                             .andCity("medellin")
             );
+            LOGGER.info("Busqueda correcta del producto");
         } catch (Exception e) {
             LOGGER.warn(e.getMessage());
             Assertions.fail("ERROR EN LA BUSQUEDA");
         }
         try {
-            Thread.sleep(6000);
+            waitTime(6000);
             theActorInTheSpotlight().attemptsTo(
                     orderProduct()
             );
+            LOGGER.info("Se ordenan los productos por precio");
         } catch (Exception e) {
             LOGGER.warn(e.getMessage());
             Assertions.fail("ERROR AL ORDENAR EL PRODUCTO");
         }
         try {
-            Thread.sleep(6000);
+            waitTime(6000);
             theActorInTheSpotlight().attemptsTo(
                     addCart()
             );
 
-            Thread.sleep(2000);
+            LOGGER.info("Agregar al carro primera vez");
         } catch (Exception e) {
             LOGGER.warn(e.getMessage());
             Assertions.fail("ERROR EN LA SELECCION DEL PRODUCTO");
         }
         try {
-            Thread.sleep(6000);
+            waitTime(3000);
             theActorInTheSpotlight().attemptsTo(
-                    addCart()
+                    repeatAdd()
             );
+            LOGGER.info("Agregar al carro segunda vez");
 
-            Thread.sleep(2000);
         } catch (Exception e) {
             LOGGER.warn(e.getMessage());
             Assertions.fail("ERROR EN LA SELECCION DEL PRODUCTO");
         }
         try {
-            Thread.sleep(5000);
+            waitTime(5000);
             theActorInTheSpotlight().attemptsTo(
                     checkout()
             );
+            LOGGER.info("Finalizó la compra");
         } catch (Exception e) {
             LOGGER.warn(e.getMessage());
             Assertions.fail("ERROR EN LA FINALIZACION DE LA COMPRA");
@@ -120,7 +126,7 @@ public class StepDefinition extends Setup {
                     )
 
             );
-            LOGGER.info("Comparación Exitosa");
+            LOGGER.info("Validación Exitosa");
         } catch (Exception e) {
             LOGGER.warn(e.getMessage());
             Assertions.fail("ERROR EN LA VALIDACION");
@@ -129,7 +135,7 @@ public class StepDefinition extends Setup {
     }
 
     public void fillCustomer() {
-        customer=new Customer();
+        customer = new Customer();
         customer.setEmail("juan.pineda@sofka.com.co");
         customer.setPassword("Acceso12");
     }

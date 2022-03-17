@@ -2,39 +2,17 @@
 <testsuite name="com.exito.runner.RunnerTestCucumber" tests="0" skipped="0" failures="0" errors="0" timestamp="1970-01-01T00:00:00" hostname="PSOKFA0777" time="0.0">
   <properties/>
   <system-out><![CDATA[
-?[33mUndefined scenarios:?[0m
-?[33mfile:///D:/RetoAutomatizacionWeb/src/test/resources/features/purchase.feature:7?[0m# Compra productos de mercado
+?[31mFailed scenarios:?[0m
+?[31mfile:///D:/RetoAutomatizacionWeb/src/test/resources/features/purchase.feature:7?[0m# Compra productos de mercado
 
-1 Scenarios (?[33m1 undefined?[0m)
-4 Steps (?[33m4 undefined?[0m)
-0m0,459s
+1 Scenarios (?[31m1 failed?[0m)
+4 Steps (?[31m1 failed?[0m, ?[36m1 skipped?[0m, ?[32m2 passed?[0m)
+0m54,069s
 
 
-You can implement missing steps with the snippets below:
-
-@Given("el cliente se encuentra en la página de inicio")
-public void elClienteSeEncuentraEnLaPáginaDeInicio() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-
-@When("el cliente ingresa a su cuenta con email y contrasenna")
-public void elClienteIngresaASuCuentaConEmailYContrasenna() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-
-@When("el cliente selecciona sus productos y finaliza su compra")
-public void elClienteSeleccionaSusProductosYFinalizaSuCompra() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-
-@Then("la página debera mostrar el resumen de la compra")
-public void laPáginaDeberaMostrarElResumenDeLaCompra() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
+java.lang.AssertionError: ERROR EN LA SELECCION DEL PRODUCTO
+	at com.exito.stepdefinition.purchase.StepDefinition.elClienteSeleccionaSusProductosYFinalizaSuCompra(StepDefinition.java:106)
+	at ?.el cliente selecciona sus productos y finaliza su compra(file:///D:/RetoAutomatizacionWeb/src/test/resources/features/purchase.feature:10)
 
 
 ]]></system-out>

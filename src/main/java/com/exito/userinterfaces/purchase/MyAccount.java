@@ -6,14 +6,13 @@ import org.openqa.selenium.By;
 
 public class MyAccount extends PageObject {
 
-    public static final Target BOTON_CUENTA =Target.
+    public static final Target BOTON_CUENTA = Target.
             the("Mi cuenta")
             .located(By.xpath("//span[contains(text(), 'Mi cuenta')]"));
 
     public static final Target EMAIL_CONTRASENNA = Target.
             the("Boton email y contrasenna")
             .located(By.xpath("//span[contains(text(), 'Ingresa con email y contraseña')]"));
-    //cssselector = div li:nth-child(2) div span
 
     public static final Target CAMPO_EMAIL = Target.
             the("Campo del email")
@@ -23,9 +22,8 @@ public class MyAccount extends PageObject {
             the("Campo del contrasenna")
             .located(By.xpath("//input[@type='password']"));
 
-    public static final Target BOTON_ENTRAR= Target.
+    public static final Target BOTON_ENTRAR = Target.
             the("Boton entrar")
             .located(By.xpath("//span[contains(text(), 'Entrar')]"));
-
 
 }

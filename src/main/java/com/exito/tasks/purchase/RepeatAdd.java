@@ -6,17 +6,15 @@ import net.serenitybdd.screenplay.actions.Click;
 
 import static com.exito.userinterfaces.purchase.ListOption.*;
 
-public class AddCart implements Task {
+public class RepeatAdd implements Task {
     @Override
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
-                Click.on(BOTON_AGREGAR),
-                Click.on(ENVIO_DOMICILIO),
-                Click.on(CONFIRMAR_DIRECCION)
+                Click.on(BOTON_AGREGAR_ALTERNATIVO)
         );
     }
 
-    public static AddCart addCart() {
-        return new AddCart();
+    public static RepeatAdd repeatAdd(){
+        return new RepeatAdd();
     }
 }

@@ -9,7 +9,6 @@ public class ProductPage extends PageObject {
     public static final Target CATEGORIAS = Target.
             the("todas las categorias")
             .located(By.xpath("//p[contains(text(), 'Todas las categorías')]"));
-
     public static final Target MERCADO = Target.
             the("mercado")
             .located(By.id("mercado"));

@@ -18,6 +18,9 @@ public class ListOption extends PageObject {
             the("boton agregar")
             .located(By.xpath("//div[@class='exito-vtex-components-4-x-blockBuyButton']"));
 
+    public static final Target BOTON_AGREGAR_ALTERNATIVO= Target.
+            the("boton agregar alternativo")
+            .located(By.xpath("//div[@class='exito-vtex-components-4-x-buyButton productSummaryBuyButtonProductRich']"));
 
     public static final Target ENVIO_DOMICILIO = Target.
             the("Envio a domicilio")
